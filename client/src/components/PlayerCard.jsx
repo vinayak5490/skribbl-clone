@@ -1,9 +1,12 @@
 import React from 'react'
 import { useState } from 'react'
 import AvatarSelector from './AvatarSelector.jsx';
+import { useNavigate } from 'react-router-dom';
 
 const PlayerCard = () => {
     const [name, setName] = useState("");
+
+    const navigate = useNavigate();
   return (
     <div className='bg-blue-900 p-6 rounded-lg w-[380px] shadow-2xl border border-blue-700'>
         <div className='flex gap-2'>
@@ -28,7 +31,8 @@ const PlayerCard = () => {
             Play!
         </button>
 
-        <button className='bg-blue-500 hover:bg-blue-600 active:scale-95 transition-all duration-200 w-full mt-3 py-2 rounded-lg shadow'>
+        <button className='bg-blue-500 hover:bg-blue-600 active:scale-95 transition-all duration-200 w-full mt-3 py-2 rounded-lg shadow'
+        onClick={()=>navigate("/private-room")}>
             Create Private Room
         </button>
     </div>
