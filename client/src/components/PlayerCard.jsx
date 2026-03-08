@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import AvatarSelector from './AvatarSelector.jsx';
 
 const PlayerCard = () => {
     const [name, setName] = useState("");
@@ -21,7 +22,7 @@ const PlayerCard = () => {
             </select>
         </div>
 
-        <div className='flex justify-center mt-6 text-6xl'>😊</div>
+        <AvatarSelector/>
 
         <button className='bg-green-500 hover:bg-green-600 transition-all duration-200 w-full mt-6 py-3 text-xl font-semibold rounded-lg shadow'>
             Play!
